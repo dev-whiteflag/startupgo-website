@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://getbootstrap.com/docs/4.1/examples/sign-in/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./img/icons8-foguete-lançado-100.png">
+
+    <title>Mídia e Visibilidade</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Signin Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./Signin Template for Bootstrap_files/signin.css" rel="stylesheet">
+
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: white">
+        <a class="navbar-brand" href="#"></a>
+        <img src="./img/icons8-foguete-lançado-100.png" width="40" height="40" class=" d-inline-block align-left" alt="">
+        <!--   class="ml-3" DETERMINA O ESPAÇAMENTO À ESQUERDA         -->
+        <h5 class="ml-2 text-black h5"> Start Up </h5>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+            </ul>
+        </div>
+    </nav>
+</head>
+</head>
+
+<body>
+    <style>
+        body {
+            background: url("img/rocket.png") no-repeat center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+
+<div class="container">
+    </br></br>
+    <div class="d-flex justify-content-center">
+        </br></br></br>
+        <img class="mb-4" src="./img/icons8-foguete-96.png" alt="" width="125" height="125">
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary btn-lg active" onclick="Empresa()">Sou Star Up</button>
+    </div>
+    </br>
+    <div class="d-flex justify-content-center">
+        <img class="mb-4" src="./img/investidor.png" alt="" width="125" height="125">
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary btn-lg active" onclick="Aluno()">Sou Investidor</button>
+
+    </div>
+    </br>
+    <div class="d-flex justify-content-center">
+        <img class="mb-4" src="./img/grupo.png" alt="" width="125" height="125">
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary btn-lg active" onclick="Egresso()">Sou Comunidade</button>
+
+    </div>
+</div>
+<script>
+    function Aluno() {
+        window.location.href = "./CadastroAluno.html"
+    }
+    function Empresa() {
+        window.location.href = "./CadastraEmpresa.html"
+    }
+    function Egresso() {
+        window.location.href = "./CadastroEgresso.html"
+    }
+</script>
+</body>
+
+</html>
