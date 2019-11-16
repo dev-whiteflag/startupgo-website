@@ -1,4 +1,6 @@
 
+/* logo colors: #0C471E, #D3CE2B */
+
 /* font definitions */
 
 button {
@@ -6,10 +8,14 @@ button {
 }
 
 a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;    
 }
 
 p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.lead {
     font-family: 'Open Sans', sans-serif;  
 }
 
@@ -17,8 +23,16 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
-.lead {
-    font-family: 'Open Sans', sans-serif;
+.display-5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.weight-300 {
+    font-weight: 300;
 }
 
 /* general styling */
@@ -36,8 +50,31 @@ p {
     background-image:
     linear-gradient(to right, #000000CC, #000000CC),
     url('./../img/landing/hero-background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
+
+.home-newsletter {
+    margin-top: -2.5%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    background-color: #D3CE2B;
+}
+
+.btn-newsletter {
+    border: 1px solid black;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-size: 100%;
+}
+
+#hero-2 {
+    background-color: #0C471E;
+}
+
+/* material colors */
 
 .material-white-100 {
     color: #f5f5f5;

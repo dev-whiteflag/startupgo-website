@@ -2,81 +2,132 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script> -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="./img/icons8-foguete-lançado-100.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="./img/icons8-foguete-lançado-100.png" />
 
     <title>StartupGO</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
-
     <!-- Bootstrap core CSS -->
-    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/style-index.css" rel="stylesheet">
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet" />
+    <link href="./css/style-index.css" rel="stylesheet" />
 </head>
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg bg-light">
-        <a id="branding" class="navbar-brand" href="#lol" >
-            <img src="./img/branding/logo-StartupGO.png" width="50%" alt="Logo da StartupGO">
+        <a id="branding" class="navbar-brand" href="#lol">
+            <img src="./img/branding/logo-StartupGO.png" width="50%" alt="Logo da StartupGO" />
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-            
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Dashboard</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
-                </ul>
+            </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-registrar btn-outline-primary my-2 my-sm-0" type="submit">Registrar</button>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Entrar</button>
+                <a class="btn btn-registrar btn-outline-primary my-2 my-sm-0" href="./pages/criaconta.html" role="button">Registrar</a>
+                <a class="btn btn-outline-success my-2 my-sm-0" href="./pages/login.html" role="button">Entrar</a>
             </form>
         </div>
-      </nav>
+    </nav>
 
-      <section id="hero" class="jumbotron jumbotron-fluid">
+    <section id="hero" class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4 material-white-100">Conectando a Comunidade, indiscriminadamente.</h1>
+            <h1 class="display-4 material-white-100">
+                Conectando a Comunidade, indiscriminadamente.
+            </h1>
             <p class="lead material-white-300">
-                    Você já ouviu falar de comunidades de startups? Empreendedores da mesma região que se unem para compartilhar aprendizados,
-                    ajudando a desenvolver o ecossistema local.
+                Você já ouviu falar da nossa comunidade? Sociedade ilimitada com
+                pessoas que empreendem, querem empreender ou apoiar o ecossistema de
+                inovação em Goiás.
             </p>
-            <hr class="my-4 material-white-100-hr">
+            <hr class="my-4 material-white-100-hr" />
             <p class="material-white-300">
-                Desenvolvemos um sistema com o Objetivo de Conectar Empreendedores, Desenvolvedores e Empresas
-                da região facilmente, para aumentar a produtividade da Comunidade.
+                Desenvolvemos um sistema com o Objetivo de Conectar Empreendedores,
+                Desenvolvedores e Empresas da região facilmente, para aumentar a
+                produtividade da Comunidade.
             </p>
             <p class="lead">
-              <a class="btn btn-outline-primary btn-lg" href="#" role="button">Registrar</a>
+                <a class="btn btn-outline-primary btn-lg" href="./pages/criaconta.html" role="button">Registrar</a>
             </p>
         </div>
-      </section>
+    </section>
 
-      <script src="./vendor/jquery/jquery-3.4.1.min.js"></script>
-      <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <section class="container-fluid home-newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="single">
+                        <h2 class="weight-300">Se inscreva na nossa Newsletter</h2>
+                        <p>
+                            Não mandamos spam, só enviaremos noticias sobre a Comunidade.
+                        </p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Seu endereço de Email" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-newsletter my-2 my-sm-0" type="submit">Inscrever-se</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hero-2" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="./img/landing/hero-2-image.svg" width="65%">
+                </div>
+                <div class="col">
+                    <h1 class="display-5 material-white-100">
+                        Eventos da Comunidade, na Suas Mãos.
+                    </h1>
+                    <p class="lead material-white-300">
+                        Acesse a agenda oficial da StartupGO para ficar por dentro dos eventos futuros!
+                    </p>
+                    <p class="lead">
+                        <a class="btn btn-outline-primary btn-lg" 
+                            href="https://calendar.google.com/calendar/embed?src=n7qhk1t35edo7m9p1gqgfl8ovk@group.calendar.google.com&ctz=America/Sao_Paulo" role="button">Acessar a Agenda</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./vendor/modernizr/modernizr.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/function-index.js"></script>
 </body>
+
+</html>
