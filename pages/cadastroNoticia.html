@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mídia e Visibilidade</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #fafafa;
+
+        }
+    </style>
+
+
+    <div class="container">
+        </br>
+        </br>
+
+
+
+        <div class="text-center">
+            <H3>Informe os dados para Cadastro </H3>
+        </div>
+
+
+        <div>
+            </br></br>
+            <div class="form-row">
+
+
+                <div class="form-group col-md-6">
+                    <label for="Nome">Nome</label>
+                    <input type="text" class="form-control" id="Nome" placeholder="Nome">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Sobrenome">Sobrenome</label>
+                    <input type="text" class="form-control" id="Sobrenome" placeholder="Sobrenome">
+                </div>
+
+            </div>
+            <div class="form-row">
+
+
+                <div class="form-group col-md-6">
+                    <label for="Endereco">Endereço</label>
+                    <input type="text" class="form-control" id="Endereco" placeholder="Endereço">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="Bairro">Bairro</label>
+                    <input type="text" class="form-control" id="Bairro" placeholder="Bairro">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="Estado">Estado</label>
+                    <input type="text" class="form-control" id="Estado" placeholder="Estado">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="CEP">CEP</label>
+                    <input type="text" class="form-control " onkeypress="$(this).mask('00.000-000')" id="CEP"
+                        placeholder="CEP">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="Bairro">Número</label>
+                    <input type="text" class="form-control" id="Numero" placeholder="Número">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="Celular">Celular</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')" id="Telefone1"
+                    placeholder="Celular">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Celular 2">Celular 2</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')" id="Telefone2"
+                    placeholder="Celular 2">
+            </div>
+
+
+        </div>
+
+
+        <div class="form-group col-md-6">
+            <label for="inputState">Gênero: </label>
+            <select id="Sexo" class="form-control">
+                <option selected>Escolha...</option>
+                <option>Masculino</option>
+                <option>Feminino</option>
+                <option>Não especificar</option>
+
+            </select>
+        </div>
+
+
+        <div class="form-row">
+            <img class="mb-4" src="../img/icons/icons8-facebook.svg" alt="" width="125" height="125">
+            <div class="form-group col-md-4">
+                <label for="Facebook">Facebook</label>
+                <input type="text" class="form-control" id="Facebook" placeholder="Facebook">
+            </div>
+            <img class="mb-4" src="../img/icons/icons8-github.svg" alt="" width="125" height="125">
+            <div class="form-group col-md-4">
+                <label for="GitHub">GitHub</label>
+                <input type="text" class="form-control" id="GitHub" placeholder="GitHub">
+            </div>
+            <img class="mb-4" src="../img/icons/icons8-instagram.svg" alt="" width="125" height="125">
+            <div class="form-group col-md-4">
+                <label for="Instragram">Instragram</label>
+                <input type="text" class="form-control" id="Instragram" placeholder="Instragram">
+            </div>
+            <img class="mb-4" src="../img/icons/icons8-twitter.svg" alt="" width="125" height="125">
+            <div class="form-group col-md-4">
+                <label for="Twitter">Twitter</label>
+                <input type="text" class="form-control" id="Twitter" placeholder="Twitter">
+            </div>
+        </div>
+
+
+
+
+
+
+        <div align="center">
+
+            <button type="button" class="btn btn-success btn-lg ">Finalizar Cadastro</button>
+
+        </div>
+
+    </div>
+
+
+    </br></br>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+
+</body>
+
+</html>

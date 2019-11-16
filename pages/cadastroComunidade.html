@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mídia e Visibilidade</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #fafafa;
+
+        }
+    </style>
+
+
+    <div class="container">
+        </br>
+        </br>
+
+
+
+        <div class="text-center">
+            <H3>Informe os dados para Cadastro da comunidade </H3>
+        </div>
+
+
+        <div>
+            </br></br>
+            <div class="form-row">
+
+
+                <div class="form-group col-md-6">
+                    <label for="Nome">Nome da comunidade</label>
+                    <input type="text" class="form-control" id="Nome" placeholder="Nome">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Sobrenome">Área de atuação </label>
+                    <input type="text" class="form-control" id="Atuacao" placeholder="Área de atuação ">
+                </div>
+
+            </div>
+            <div class="form-row">
+
+
+                <div class="form-group col-md-6">
+                    <label for="Cidade">Cidade</label>
+                    <input type="text" class="form-control" id="Endereco" placeholder="Cidade">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="Região">Região</label>
+                    <input type="text" class="form-control" id="Região" placeholder="Região">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="Estado">Estado</label>
+                    <input type="text" class="form-control" id="Estado" placeholder="Estado">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Nome">Responsável pela comunidade</label>
+                <input type="text" class="form-control" id="Responsavel" placeholder="Nome">
+            </div>
+     
+            <div class="table-responsive">
+                    <label for="Nome">Administradores</label>
+                <table class="table table-borderless " id="dynamic_field">
+                    <tr>
+                        <td><input type="text" name="ADMVetor[]" placeholder="Administradores: "
+                                class="form-control name_list" /></td>
+                        <td><button type="button" name="add" id="add" class="btn btn-success">Adicionar Mais</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    var i = 1;
+                    $('#add').click(function () {
+                        i++;
+                        $('#dynamic_field').append('<tr id="row' + i + '"><td><input type="text" name="ADMVetor[]" placeholder="Adicionar mais" class="form-control name_list" /></td><td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">Remover Administrador</button></td></tr>');
+                    });
+
+                    $(document).on('click', '.btn_remove', function () {
+                        var button_id = $(this).attr("id");
+                        $('#row' + button_id + '').remove();
+                    });
+
+
+                });
+            </script>
+
+        </div>
+
+        <div align="center">
+
+            <button type="button" class="btn btn-success btn-lg ">Finalizar Cadastro</button>
+
+        </div>
+
+    </div>
+
+
+    </br></br>
+    
+    
+
+
+</body>
+
+</html>
