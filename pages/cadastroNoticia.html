@@ -17,7 +17,10 @@
     <link href="./../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
 
 
@@ -40,109 +43,79 @@
 
 
         <div class="text-center">
-            <H3>Informe os dados para Cadastro </H3>
+            <H3>Informe os dados para Cadastro do evento </H3>
         </div>
 
 
         <div>
             </br></br>
+
             <div class="form-row">
 
 
                 <div class="form-group col-md-6">
-                    <label for="Nome">Nome</label>
-                    <input type="text" class="form-control" id="Nome" placeholder="Nome">
+                    <label for="Nome">Título</label>
+                    <input type="text" class="form-control" id="Titulo" placeholder="Nome">
                 </div>
+
                 <div class="form-group col-md-6">
-                    <label for="Sobrenome">Sobrenome</label>
-                    <input type="text" class="form-control" id="Sobrenome" placeholder="Sobrenome">
+                    <label for="Nome">Subtítulo</label>
+                    <input type="text" class="form-control" id="Subtitulo" placeholder="Subtítulo">
                 </div>
 
             </div>
-            <div class="form-row">
-
-
-                <div class="form-group col-md-6">
-                    <label for="Endereco">Endereço</label>
-                    <input type="text" class="form-control" id="Endereco" placeholder="Endereço">
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label for="Bairro">Bairro</label>
-                    <input type="text" class="form-control" id="Bairro" placeholder="Bairro">
-                </div>
-
-                <div class="form-group col-md-4">
-                    <label for="Estado">Estado</label>
-                    <input type="text" class="form-control" id="Estado" placeholder="Estado">
-                </div>
-
-                <div class="form-group col-md-4">
-                    <label for="CEP">CEP</label>
-                    <input type="text" class="form-control " onkeypress="$(this).mask('00.000-000')" id="CEP"
-                        placeholder="CEP">
-                </div>
-
-                <div class="form-group col-md-4">
-                    <label for="Bairro">Número</label>
-                    <input type="text" class="form-control" id="Numero" placeholder="Número">
-                </div>
-
-            </div>
-        </div>
-
-        <div class="form-row">
-
-            <div class="form-group col-md-6">
-                <label for="Celular">Celular</label>
-                <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')" id="Telefone1"
-                    placeholder="Celular">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Texto</label>
+                <textarea class="form-control" id="descricao" rows="5"></textarea>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="Celular 2">Celular 2</label>
-                <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0 0000-0000')" id="Telefone2"
-                    placeholder="Celular 2">
+                <label for="Imagem do perfil">Capa</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="imagemPerfil">
+                    <label class="custom-file-label" for="customFile">Capa</label>
+                    </br></br>
+                </div>
+                </br>
+                <div class="progress" id="progressbar">
+                    </br></br>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
 
 
+
+            <div class="table-responsive">
+                <label for="Nome">Tags</label>
+                <table class="table table-borderless " id="dynamic_field">
+                    <tr>
+                        <td><input type="text" name="Tags[]" placeholder="Tags: "
+                                class="form-control name_list" /></td>
+                        <td><button type="button" name="add" id="add" class="btn btn-success">Adicionar Mais</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    var i = 1;
+                    $('#add').click(function () {
+                        i++;
+                        $('#dynamic_field').append('<tr id="row' + i + '"><td><input type="text" name="Tags[]" placeholder="Adicionar mais" class="form-control name_list" /></td><td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">Remover tag</button></td></tr>');
+                    });
+
+                    $(document).on('click', '.btn_remove', function () {
+                        var button_id = $(this).attr("id");
+                        $('#row' + button_id + '').remove();
+                    });
+
+
+                });
+            </script>
         </div>
 
-
-        <div class="form-group col-md-6">
-            <label for="inputState">Gênero: </label>
-            <select id="Sexo" class="form-control">
-                <option selected>Escolha...</option>
-                <option>Masculino</option>
-                <option>Feminino</option>
-                <option>Não especificar</option>
-
-            </select>
-        </div>
-
-
-        <div class="form-row">
-            <img class="mb-4" src="../img/icons/icons8-facebook.svg" alt="" width="125" height="125">
-            <div class="form-group col-md-4">
-                <label for="Facebook">Facebook</label>
-                <input type="text" class="form-control" id="Facebook" placeholder="Facebook">
-            </div>
-            <img class="mb-4" src="../img/icons/icons8-github.svg" alt="" width="125" height="125">
-            <div class="form-group col-md-4">
-                <label for="GitHub">GitHub</label>
-                <input type="text" class="form-control" id="GitHub" placeholder="GitHub">
-            </div>
-            <img class="mb-4" src="../img/icons/icons8-instagram.svg" alt="" width="125" height="125">
-            <div class="form-group col-md-4">
-                <label for="Instragram">Instragram</label>
-                <input type="text" class="form-control" id="Instragram" placeholder="Instragram">
-            </div>
-            <img class="mb-4" src="../img/icons/icons8-twitter.svg" alt="" width="125" height="125">
-            <div class="form-group col-md-4">
-                <label for="Twitter">Twitter</label>
-                <input type="text" class="form-control" id="Twitter" placeholder="Twitter">
-            </div>
-        </div>
 
 
 
@@ -159,10 +132,7 @@
 
 
     </br></br>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+ 
 
 
 </body>
