@@ -47,7 +47,6 @@ function setPessoa() {
         Endereco: Endereco,
         Numero: Numero,
         Bairro: Bairro,
-      
         Estado: Estado,
         Genero: Genero,
         CEP: CEP,
@@ -104,6 +103,7 @@ function set2() {
                 var uid = user.uid;
                 //  set3(uid, email2);
                 window.alert('Cadastro Criado com sucesso')
+                location.href = "../index.html";
 
             } else {
 
