@@ -15,57 +15,53 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet" />
+    <link href='./../vendor/fontawesome/css/all.min.css' rel='stylesheet' />
     <link href="../css/style-index.css" rel="stylesheet" />
 
-
-
-
-
-
-</head>
 </head>
 
 <body>
 
-        <nav class="navbar navbar-light navbar-expand-lg bg-light">
-                <a id="branding" class="navbar-brand" href="#lol">
-                    <img src="../img/branding/logo-StartupGO.png" width="50%" alt="Logo da StartupGO" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <a class="btn btn-outline-success my-2 my-sm-0" href="./pages/login.html" role="button">Entrar</a>
-                    </form>
-                </div>
-            </nav>
+    <nav class="navbar navbar-light navbar-expand-lg bg-light">
+        <a id="branding" class="navbar-brand" href="./../index.html">
+            <img src="./../img/branding/logo-StartupGO.png" width="50%" alt="Logo da StartupGO" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Cadastros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./cadastroStartup.html">Startup</a>
+                        <a class="dropdown-item" href="./cadastroComunidade.html">Comunidade</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./cadastroEvento.html">Eventos</a>
+                        <a class="dropdown-item" href="./cadastroNoticia.html">Notícias</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/estatisticas.html">Estatísticas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/privacidade.html">Privacidade</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a class="btn btn-outline-success my-2 my-sm-0" href="./pages/login.html" role="button">Entrar</a>
+            </form>
+        </div>
+    </nav>
 
 
     <style>
@@ -80,17 +76,15 @@
         </br>
         </br>
 
-
-
         <div class="text-center">
-            <H3>Informe os dados para Cadastro </H3>
+            <span>
+                <i class="far fa-address-card" style="font-size: 300%; margin-bottom: 2%;"></i>
+                <H3>Cadastro Pessoal</H3>
+            </span>
         </div>
-
 
         <div align="center">
             </br></br>
-
-          
 
             <div class="form-group col-md-6">
                 <label for="Email" style="background-color: white">Email</label>
@@ -107,18 +101,14 @@
                 <input type="password" class="form-control" id="Senha" placeholder="Senha">
             </div>
 
-            <button type="button" class="btn btn-success btn-lg "> Cadastar</button>
+            <button type="button" class="btn btn-success btn-lg" style="margin-top: 2%;"> Cadastar</button>
 
         </div>
 
         </form>
     </div>
 
-
-
-
-
-
+    <script src='./../vendor/fontawesome/js/all.min.js'></script>
 </body>
 
 </html>

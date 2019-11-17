@@ -90,11 +90,13 @@ h2 {
     margin-top: 4%;
 }
 
+    /* feed */
+
 .publicaciones-blog-home {
     padding-bottom: 50px;
 	background: url("") no-repeat fixed center center;
     background-size: 100% auto;
-	background-color: #f1f1f1;
+	background-color: #fafafa;
 }
 .publicaciones-blog-home h2 {
 	text-align: center;
@@ -125,7 +127,7 @@ h2 {
     height: 400px;
     width: 100%;
     color: #aaa;
-    background-color: #2BBCDE;
+    background-color: #D3CE2B;
     position: absolute;
     top: 0;
     opacity: 0.95;
@@ -134,7 +136,7 @@ h2 {
     transition: all 0.4s ease-out 0s;   
 }
 .publicaciones-blog-home .black {
-	background: #2BBCDE;
+	background: #0C471E;
 }
 .publicaciones-blog-home .fondo-publicacion-home .img-publicacion-principal-home {
 	display: inline-block;
