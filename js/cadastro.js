@@ -36,7 +36,7 @@ function setPessoa() {
     var OE = document.getElementById("OE").value;
     var Telefone1 = document.getElementById("Telefone1").value;
     var Telefone2 = document.getElementById("Telefone2").value;
-    
+
 
 
 
@@ -113,28 +113,40 @@ function set2() {
 
     var Email = document.getElementById("Email").value;
     var Senha = document.getElementById("Senha").value;
-    email2 = Email;
-    senha2 = Senha;
-    firebase.auth().createUserWithEmailAndPassword(email2, senha2).catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+    var Senha2 = document.getElementById("Senha2").value;
 
-        // ...
-        console.log(errorCode + "" + errorMessage);
-    });
 
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            // User is signed in.
-            var email = user.email;
-            var uid = user.uid;
-            set3(uid, email2);
+    if (Senha == Senha2) {
 
-        } else {
+        email2 = Email;
+        senha2 = Senha;
+        firebase.auth().createUserWithEmailAndPassword(email2, senha2).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
 
-        }
-    });
+            // ...
+            console.log(errorCode + "" + errorMessage);
+        });
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+                var email = user.email;
+                var uid = user.uid;
+                //  set3(uid, email2);
+                window.alert('Cadastro Criado com sucesso')
+
+            } else {
+
+            }
+        });
+    } else {
+        window.alert('Verifique os campos e tente novamente')
+    }
+
+
+
 }
 
 
