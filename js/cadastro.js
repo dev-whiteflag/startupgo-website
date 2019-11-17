@@ -22,83 +22,51 @@ function setPessoa() {
 
     var db = firebase.firestore();
     //Pegando os valores do relatório 
-    var Nome = document.getElementById("nomeComleto").value;
-    var Sobrenome = document.getElementById("sobrenome").value;
+    var Nome = document.getElementById("Nome").value;
+    var Sobrenome = document.getElementById("Sobrenome").value;
     var Endereco = document.getElementById("Endereco").value;
     var Numero = document.getElementById("Numero").value;
     var Bairro = document.getElementById("Bairro").value;
-    var Cidade = document.getElementById("Cidade").value;
     var Estado = document.getElementById("Estado").value;
-    var Sexo = document.getElementById("Sexo").value;
+    var Genero = document.getElementById("Genero").value;
     var CEP = document.getElementById("CEP").value;
-    var CPF = document.getElementById("CPF").value;
-    var RG = document.getElementById("RG").value;
-    var OE = document.getElementById("OE").value;
     var Telefone1 = document.getElementById("Telefone1").value;
     var Telefone2 = document.getElementById("Telefone2").value;
+    var Facebook = document.getElementById("Facebook").value;
+    var GitHub = document.getElementById("GitHub").value;
+    var Instragram = document.getElementById("Instragram").value;
+    var Twitter = document.getElementById("Twitter").value;
 
 
 
 
     //inserindo os valores no banco, onde o valor antes dos ":" é o indice do banco e o nome depois do ":" são as variaveis locais
-    db.collection("Alunos").add({
-        Egresso: false,
-        StatusCadastro: "Aguardando",
-        DadosPessoais: false,
-        DadosProfissionais: false,
-        DadosOrientador: false,
-        Ativado: false,
+    db.collection("Pessoas").add({
         Nome: Nome,
-        Matricula: Matricula,
-        Curso: Curso,
-        Area: Area,
-        Periodo: Periodo,
+        Sobrenome: Sobrenome,
         Endereco: Endereco,
         Numero: Numero,
         Bairro: Bairro,
-        Cidade: Cidade,
+      
         Estado: Estado,
-        Sexo: Sexo,
+        Genero: Genero,
         CEP: CEP,
-        CPF: CPF,
-        RG: RG,
-        OE: OE,
-        uid: "",
-        uidDoc: "",
+        Twitter: Twitter,
+        Instragram: Instragram,
+        GitHub: GitHub,
+        Facebook: Facebook,
         Email: "",
-        DataCadastro: dataCadastro,
         Telefone1: Telefone1,
         Telefone2: Telefone2,
-        Idiomas: {
-            idioma1: idioma1,
-            idioma2: idioma2
-
-        },
-        Formulario: {
-            Projeto: Projeto,
-            Trabalhando: Trabalhando,
-            TrabalhandoArea: TrabalhandoArea,
-            PosGraduacao: PosGraduacao,
-            TrabalhandoGraduacao: TrabalhandoGraduacao,
-        },
-        Experiencias: "",
-        Habilidades: "",
-        PalavrasChave: "",
-        ReferenciaContato: "",
-        EmpregadoPeloSistema: {
-            Empregado: false,
-            NomeEmpresa: ""
-
-        }
 
 
 
     })
         .then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
-            window.alert("Solicitação de cadastro realizada com sucesso, aguarde aprovação!")
+            window.alert("Perfil criado com sucesso")
             window.localStorage.setItem("docRef", docRef.id);
-            location.href = "./Login.html";
+            location.href = "../index.html";
 
         })
         .catch(function (error) {
