@@ -15,6 +15,8 @@
     <!-- Bootstrap core CSS -->
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet" />
+    <link href='./vendor/fullcalendar/packages/core/main.min.css' rel='stylesheet' />
+    <link href='./vendor/fullcalendar/packages/daygrid/main.min.css' rel='stylesheet' />
     <link href="./css/style-index.css" rel="stylesheet" />
 </head>
 
@@ -53,7 +55,8 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <a class="btn btn-registrar btn-outline-primary my-2 my-sm-0" href="./pages/criaconta.html" role="button">Registrar</a>
+                <a class="btn btn-registrar btn-outline-primary my-2 my-sm-0" href="./pages/criaconta.html"
+                    role="button">Registrar</a>
                 <a class="btn btn-outline-success my-2 my-sm-0" href="./pages/login.html" role="button">Entrar</a>
             </form>
         </div>
@@ -102,7 +105,7 @@
         </div>
     </section>
 
-    <section id="hero-2" class="jumbotron jumbotron-fluid">
+    <!-- <section id="hero-2" class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -116,18 +119,47 @@
                         Acesse a agenda oficial da StartupGO para ficar por dentro dos eventos futuros!
                     </p>
                     <p class="lead">
-                        <a class="btn btn-outline-primary btn-lg" 
-                            href="https://calendar.google.com/calendar/embed?src=n7qhk1t35edo7m9p1gqgfl8ovk@group.calendar.google.com&ctz=America/Sao_Paulo" role="button">Acessar a Agenda</a>
+                        <a class="btn btn-primary btn-lg"
+                            href="https://calendar.google.com/calendar/embed?src=n7qhk1t35edo7m9p1gqgfl8ovk@group.calendar.google.com&ctz=America/Sao_Paulo"
+                            role="button">Acessar a Agenda</a>
                     </p>
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section id="hero-calendar" class="container">
+        <div class="container">
+            <h1 class="display-5">Calendário StartupGO</h1>   
+        </div>
+        <div id='calendar'></div>
     </section>
+
+    <section id="hero-3">
+        <div>
+            <h1 class="display-5 material-white-100">Startups Parceiras</h1>
+        </div>
+        <div class="container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1nrQ_wwJyfa5EmIyrmNxDyBapo3a-0VpR" width="100%"
+                height="600px"></iframe>
+        </div>
+    </section>
+
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Copyright &copy; Your Website</small>
+        </div>
+    </footer>
 
     <script src="./vendor/jquery/jquery-3.4.1.min.js"></script>
     <script src="./vendor/modernizr/modernizr.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src='./vendor/fullcalendar/packages/core/main.min.js'></script>
+    <script src='./vendor/fullcalendar/packages/daygrid/main.min.js'></script>
+    <script src='./vendor/fullcalendar/packages/google-calendar/main.min.js'></script>
     <script src="./js/function-index.js"></script>
+
 </body>
 
 </html>

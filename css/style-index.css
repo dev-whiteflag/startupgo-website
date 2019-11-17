@@ -70,8 +70,27 @@ h2 {
     font-size: 100%;
 }
 
-#hero-2 {
+#hero-calendar{
+    padding-bottom: 5%;
+}
+
+#hero-calendar h1 {
+    text-align: center;
+    margin: 5%;
+    font-weight: 300;
+}
+
+#hero-3{
     background-color: #0C471E;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+#hero-3 h1 {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-weight: 300;
 }
 
 /* material colors */
