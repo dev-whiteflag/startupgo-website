@@ -26,7 +26,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             .then(function () {
                 var user = firebase.auth().currentUser;
                 var user2 = user.uid;
-
+                window.alert(user.Nome)
                 window.self.location.href = "../index.html";
                 return firebase.auth().signInWithEmailAndPassword(email, password);
                 
