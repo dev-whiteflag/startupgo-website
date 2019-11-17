@@ -101,9 +101,9 @@ function set2() {
                 // User is signed in.
                 var email = user.email;
                 var uid = user.uid;
-                set3(uid, email2);
+                //  set3(uid, email2);
                 window.alert('Cadastro Criado com sucesso')
-               
+                location.href = "../index.html";
 
             } else {
 
@@ -122,7 +122,7 @@ function set2() {
 function set3(uid, email) {
     var db = firebase.firestore();
     var docRef = window.localStorage.getItem("docRef");
-    var washingtonRef = db.collection("Pessoas").doc(docRef);
+    var washingtonRef = db.collection("Alunos").doc(docRef);
 
     // Set the "capital" field of the city 'DC'
     return washingtonRef.update({
@@ -140,7 +140,8 @@ function set3(uid, email) {
                     console.log("Document written with ID: ", docRef.id);
 
                     window.localStorage.setItem("docRef", docRef.id);
-                   location.href = "../index.html";
+                    location.href = "./Login.html.html";
+
                 })
                 .catch(function (error) {
                     console.error("Error adding document: ", error);
@@ -148,7 +149,7 @@ function set3(uid, email) {
                 });
 
 
-          
+            location.href = "./Login.html";
         })
         .catch(function (error) {
             // The document probably doesn't exist.
