@@ -122,10 +122,10 @@ function graficos() {
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['SaaS', 'Marketplace', 'Outros', 'Consumer', 'Venda Direta', 'Hardware', 'Clube de Assinatura', 'Venda de Dados','Licenciamento','Comissionamento','Cursos, treinamentos e consultorias','Serviços','API'],
+            labels: ['SaaS', 'Marketplace', 'Outros', 'Consumer', 'Venda Direta', 'Hardware', 'Clube de Assinatura', 'Venda de Dados', 'Licenciamento', 'Comissionamento', 'Cursos, treinamentos e consultorias', 'Serviços', 'API'],
             datasets: [{
                 label: "Números em %",
-                data: [16, 19, 9, 3, 4, 1, 0, 48],
+                data: [37, 23, 11, 7, 6, 5, 2, 2, 1, 1, 1, 1, 1],
                 backgroundColor: [
                     'rgb(255, 99, 132 )',
                     'rgb(54, 162, 235 )',
@@ -133,6 +133,10 @@ function graficos() {
                     'rgb(255, 159, 64)',
                     'rgb(255, 206, 86 )',
                     'rgb(75, 192, 192)',
+                    'rgb(65, 195, 200)',
+                    'rgb(87, 31, 159)',
+                    'rgb(231, 21, 144)',
+                    'rgb(100, 100, 100)',
                     'rgb(55, 86, 144)'
                 ],
                 borderColor: [
@@ -145,30 +149,82 @@ function graficos() {
         }
     });
 
-    /*
-        var ctx = document.getElementById('myChart6');
-    
-    
-        var myChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Médio', 'Superior ' + AlunoSuperior, 'Técnico'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [AlunoMedio, AlunoSuperior, AlunoTecnico],
-                    backgroundColor: [
-                        'rgb(220,20,60)',
-                        'rgb(176,224,230)',
-                        'rgb(55, 86, 144)'
-                    ],
-                    borderColor: [
-                        'rgba(220,20,60,1)',
-                        'rgba(176,224,230,1)',
-                        'rgb(55, 86, 144,1)'
-                    ],
-                    borderWidth: 1
-                }]
-            }
-        });
-    */
+
+    var ctx = document.getElementById('myChart6');
+
+
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['B2B2C', 'B2B ', 'B2C', 'B2G', 'P2P', 'BS2'],
+            datasets: [{
+                label: '# of Votes',
+                data: [38.5, 34.5, 20.7, 2.6, 2.90, 0.90],
+                backgroundColor: [
+                    'rgb(220,20,60)',
+                    'rgb(176,224,230)',
+                    'rgb(55, 86, 144)',
+                    'rgb(255, 99, 132 )',
+                    'rgb(54, 162, 235 )',
+                    'rgb(153, 102, 255)'
+                ],
+                borderColor: [
+                    'rgba(220,20,60,1)',
+                    'rgba(176,224,230,1)',
+                    'rgb(55, 86, 144,1)'
+                ],
+                borderWidth: 1
+            }]
+        }
+    });
+    var ctx = document.getElementById('myChart7');
+
+
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Anjo', 'Seed ', 'Não recebeu investimento'],
+            datasets: [{
+                label: '# of Votes',
+                data: [4, 3, 92],
+                backgroundColor: [
+                    'rgb(220,20,60)',
+                    'rgb(176,224,230)',
+                    'rgb(55, 86, 144)'
+                ],
+                borderColor: [
+                    'rgba(220,20,60,1)',
+                    'rgba(176,224,230,1)',
+                    'rgb(55, 86, 144,1)'
+                ],
+                borderWidth: 1
+            }]
+        }
+    }); var ctx = document.getElementById('myChart8');
+
+
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['1-10', '11-20 ', '21-40', '41-100', '101-200'],
+            datasets: [{
+                label: '# of Votes',
+                data: [91, 6, 2, 0, 0],
+                backgroundColor: [
+                    'rgb(220,20,60)',
+                    'rgb(176,224,230)',
+                    'rgb(55, 86, 144)',
+                    'rgb(255, 99, 132 )',
+                    'rgb(54, 162, 235 )',
+                    'rgb(153, 102, 255)'
+                ],
+                borderColor: [
+                    'rgba(220,20,60,1)',
+                    'rgba(176,224,230,1)',
+                    'rgb(55, 86, 144,1)'
+                ],
+                borderWidth: 1
+            }]
+        }
+    });
 }
