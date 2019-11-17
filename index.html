@@ -12,13 +12,15 @@
 
     <title>StartupGO</title>
 
+    <!-- http://177.149.159.74:8000/api -->
+
     <!-- Bootstrap core CSS -->
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet" />
     <link href='./vendor/fullcalendar/packages/core/main.min.css' rel='stylesheet' />
     <link href='./vendor/fullcalendar/packages/daygrid/main.min.css' rel='stylesheet' />
-    <link href='./vendor/fontawesome/css/all.min.css' rel='stylesheet'/>
-    <link href="./css/style-index.css" rel="stylesheet"/>
+    <link href='./vendor/fontawesome/css/all.min.css' rel='stylesheet' />
+    <link href="./css/style-index.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -35,6 +37,9 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/dashboard.html">Dashboard</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -95,12 +100,19 @@
                         <p>
                             Não mandamos spam, só enviaremos noticias sobre a Comunidade.
                         </p>
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Seu endereço de Email" />
-                            <span class="input-group-btn">
-                                <button class="btn btn-newsletter my-2 my-sm-0" type="submit">Inscrever-se</button>
-                            </span>
-                        </div>
+                        <form action="http://177.149.159.74:8000/api/contacts/new" method="post">
+
+                            <input type="hidden" name="ipAddress" id="ipAddress"/>
+                            <input type="hidden" name="owner" value="this-must-exist"/>
+
+                            <div class="input-group">
+                                <input id="email" name="email" type="email" class="form-control" placeholder="Seu endereço de Email"
+                                    required />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary btn-newsletter my-2 my-sm-0" type="submit">Inscrever-se</button>
+                                </span>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

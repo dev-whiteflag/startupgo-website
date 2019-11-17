@@ -15,3 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
     calendar.setOption('locale', 'br');
     calendar.render();
 });
+
+$.getJSON("http://jsonip.com?callback=?", function (data) {
+        $("#ipAddress").val(data.ip);
+        console.log($("#ipAddress").val())
+});
